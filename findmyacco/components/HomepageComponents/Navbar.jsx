@@ -9,7 +9,15 @@ import { Box, Image, Text,Divider, Drawer,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,} from '@chakra-ui/react';
+  AccordionIcon,Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react';
 import React from 'react';
 import { Link,NavLink } from 'react-router-dom';
 import { useDisclosure } from '@chakra-ui/react';
@@ -23,10 +31,21 @@ const Navbar = () => {
   return (
   <Box h="100px" alignItems={"center"}  justifyContent={"space-around"} postion="sticky" top={0} display={"flex"} boxShadow=" rgba(149, 157, 165, 0.2) 0px 8px 24px;" >
       <Image h="80%" src="https://www.findmyacco.com/image/logo.png"></Image>
-      <Box display={{base:"none",md:"flex"}} gap="20px" fontWeight={"bold"}>
+      <Box display={{base:"none",md:"flex"}} gap="25px" fontWeight={"bold"}>
         <Link to="/about">About us</Link>
         <Link to="/contact">Contact us</Link>
-        <Text> Student Accomodation <ChevronDownIcon/></Text>
+        <Menu>
+  <MenuButton as={Text} rightIcon={<ChevronDownIcon />}>
+   Student Accomodation <ChevronDownIcon fontSize={"20px"}/>
+  </MenuButton>
+  <MenuList>
+    <MenuItem>Download</MenuItem>
+    <MenuItem>Create a Copy</MenuItem>
+    <MenuItem>Mark as Draft</MenuItem>
+    <MenuItem>Delete</MenuItem>
+    <MenuItem>Attend a Workshop</MenuItem>
+  </MenuList>
+</Menu>
       </Box> 
 
        
