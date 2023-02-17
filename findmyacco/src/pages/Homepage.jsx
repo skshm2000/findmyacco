@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Navbar from '../../components/HomepageComponents/Navbar';
 
 const Homepage = () => {
   return (
     <div>
-      <Link to="/admin">Admin</Link>
+      <Navbar></Navbar>
     </div>
   );
 }
