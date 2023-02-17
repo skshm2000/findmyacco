@@ -28,7 +28,7 @@ const CountryGrid = () => {
     <Button bg='rgb(20,61,89)' textColor={"white"} leftIcon={<SlEnergy/>}  my="20px" ml="20px" 
       _hover={{
         background: "rgb(244,180,26)",
-        
+        color:"black"
       }}>Get Expert Help!</Button>
   </GridItem>
   <GridItem 
