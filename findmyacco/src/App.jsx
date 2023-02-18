@@ -1,13 +1,12 @@
 import { useState } from 'react'
-// import './App.css'
 import Allroutes from './pages/Allroutes'
+import './App.css'
 
 function App() {
+  
 
   return (
-    <div className="App" >
-      <Allroutes/>
-    </div>
+    <Footer/>
   )
 }
 
