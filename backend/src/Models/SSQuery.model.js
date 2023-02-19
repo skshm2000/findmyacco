@@ -1,7 +1,11 @@
 const { Schema, model } = require('mongoose')
 
-const QuerySchema = new Schema({
-    name:{
+const SSQuerySchema = new Schema({
+    firstName:{
+        type:String,
+        required:true
+    },
+    lastName:{
         type:String,
         required:true
     },
@@ -23,6 +27,6 @@ const QuerySchema = new Schema({
     }
 })
 
-const QueryModel = model('query', QuerySchema)
+const SSQueryModel = model('SSQuery', SSQuerySchema)
 
-module.exports = QueryModel
+module.exports = SSQueryModel
