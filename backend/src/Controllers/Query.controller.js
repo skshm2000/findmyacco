@@ -5,10 +5,12 @@ const GetQueries = async (page) => {
     page = +page
     page -= 1
     try {
-        const queries = await QueryModel.find().sort({_id:-1}).skip(page*15).limit(15)
+        const queries = await QueryModel.find().sort({_id:-1}).skip(page*10).limit(10);
+        const total = await QueryModel.find().countDocuments();
         return {
             error:false,
-            queries
+            queries,
+            total
         }
     } catch (error) {
         return {
@@ -54,4 +56,21 @@ const NewQuery = async ({ name, number, univ, email }) => {
     }
 }
 
-module.exports = { GetQueries, DeleteQuery, NewQuery }
+const SearchQuery = async(query) => {
+    try{
+        const res = await QueryModel.aggregate([{$match:{$or:[{name:query},{university:query}]}}]);
+        return {
+            error:false,
+            queries: res,
+            total: res.length
+        }
+    }catch(error){
+        console.log(error);
+        return {
+            error:true,
+            msg:'Something went wrong'
+        }
+    }
+}
+
+module.exports = { GetQueries, DeleteQuery, NewQuery, SearchQuery }
