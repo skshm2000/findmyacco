@@ -5,8 +5,11 @@ import { BsPeopleFill } from "react-icons/bs";
 import { FcProcess } from "react-icons/fc";
 import { RiMessage2Fill } from "react-icons/ri";
 import { Image, Stack, Flex, Text, Heading, Button } from '@chakra-ui/react';
+import { FormModal } from './FormModal'
+import { useState } from 'react';
 
 export const Hero = () => {
+  const [ state, setState ] = useState(false)
   const breakpoints = {
     base: '28px',
     sm: '35px',
@@ -31,9 +34,9 @@ export const Hero = () => {
     xl: '15px',
     '2xl': '15px',
   }
-
   return (
     <>
+        <FormModal closeModal={()=>setState(false)} toggle={state} />
         <Stack
           position={'relative'}
         >
@@ -56,6 +59,7 @@ export const Hero = () => {
                 <Button
                 w='40%'
                 bg='#143d59'
+                onClick={()=>setState(true)}
                 >Apply Now</Button>
             </Stack>
             <Stack

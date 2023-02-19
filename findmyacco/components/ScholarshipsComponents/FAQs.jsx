@@ -31,7 +31,7 @@ export const FAQs = () => {
         <h2>
           <AccordionButton my='10px' bgColor={'#f4f6f8'}>
             <Box as="span" flex='1' textAlign='left' >
-            1.Till when can I register for the scholarship?
+            1. Till when can I register for the scholarship?
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -58,7 +58,7 @@ export const FAQs = () => {
         <h2>
           <AccordionButton my='10px' bgColor={'#f4f6f8'}>
             <Box as="span" flex='1' textAlign='left'>
-            3.Which parameters will be taken into consideration?
+            3. Which parameters will be taken into consideration?
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -71,7 +71,7 @@ export const FAQs = () => {
         <h2>
           <AccordionButton my='10px' bgColor={'#f4f6f8'}>
             <Box as="span" flex='1' textAlign='left'>
-            4.Is there any eligibility criteria?
+            4. Is there any eligibility criteria?
             </Box>
             <AccordionIcon />
           </AccordionButton>
@@ -84,7 +84,7 @@ export const FAQs = () => {
         <h2>
           <AccordionButton my='10px' bgColor={'#f4f6f8'}>
             <Box as="span" flex='1' textAlign='left'>
-            5.Is there anything we require from your end?
+            5. Is there anything we require from your end?
             </Box>
             <AccordionIcon />
           </AccordionButton>

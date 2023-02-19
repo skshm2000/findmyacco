@@ -1,7 +1,10 @@
 import { Image, Stack, Flex, Text, Heading, Button } from '@chakra-ui/react';
 import heroBanner from './Assets/heroBanner.jpg'
+import { useState } from 'react';
+import { FormModal } from './FormModal';
 
 export const Register = () => {
+  const [ state, setState ] = useState(false)
   const FontSizeHeading = {
     base: '18px',
     sm: '25px',
@@ -20,6 +23,7 @@ export const Register = () => {
   }
   return (
     <>
+    <FormModal closeModal={()=>setState(false)} toggle={state}/>
     <Stack
     mt='80px'
     position={'relative'}
@@ -46,6 +50,7 @@ export const Register = () => {
             bg='#143d59'
             color={'white'}
             w='35%'
+            onClick={()=>setState(true)}
             >Register Now</Button>
         </Stack>
     </Stack>
