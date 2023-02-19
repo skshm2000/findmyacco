@@ -1,12 +1,15 @@
-import { useState } from 'react'
 import Allroutes from './pages/Allroutes'
 import './App.css'
+import Footer from '../components/HomepageComponents/Footer'
 
 function App() {
   
 
   return (
-    <Footer/>
+    <>
+    <Allroutes />
+    <Footer />
+    </>
   )
 }
 
