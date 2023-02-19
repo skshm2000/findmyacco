@@ -1,11 +1,11 @@
-const QueryModel = require('../Models/query.model')
+const SSQueryModel = require('../Models/SSQuery.model')
 const { CustomTransport } = require('./Mailer.controller')
 
-const GetQueries = async (page) => {
+const GetSSQueries = async (page) => {
     page = +page
     page -= 1
     try {
-        const queries = await QueryModel.find().sort({_id:-1}).skip(page*15).limit(15)
+        const queries = await SSQueryModel.find().sort({_id:-1}).skip(page*15).limit(15)
         return {
             error:false,
             queries
@@ -19,9 +19,9 @@ const GetQueries = async (page) => {
     }
 }
 
-const DeleteQuery = async (id) => {
+const DeleteSSQuery = async (id) => {
     try {
-        const queries = await QueryModel.findOneAndDelete({_id:id})
+        const queries = await SSQueryModel.findOneAndDelete({_id:id})
         return {
             error:false
         }
@@ -34,20 +34,22 @@ const DeleteQuery = async (id) => {
     }
 }
 
-const NewQuery = async ({ name, number, univ, email }) => {
+const NewSSQuery = async ({ firstName, lastName, number, univ, email }) => {
     try {
         const date = new Date();
+
         let day = date.getDate();
         let month = date.getMonth() + 1;
         let year = date.getFullYear();
+
         let currentDate = `${day}-${month}-${year}`;
-        const query = new QueryModel({name, email, university:univ, phoneNumber:number, date:currentDate})
+        const query = new SSQueryModel({firstName, lastName, email, university:univ, phoneNumber:number, date:currentDate})
         await query.save()
         const mail = {
             from: 'contact@findmyacco.com',
             to: email,
             subject: 'Query Recieved',
-            text: 'Query recieved, Our team will reach you soon!'
+            text: 'Your Scholarship application has been recieved, Our team will reach you soon!'
         }
         CustomTransport.sendMail(mail)
         return {
@@ -62,4 +64,4 @@ const NewQuery = async ({ name, number, univ, email }) => {
     }
 }
 
-module.exports = { GetQueries, DeleteQuery, NewQuery }
+module.exports = { GetSSQueries, DeleteSSQuery, NewSSQuery }

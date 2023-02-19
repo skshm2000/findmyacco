@@ -41,7 +41,6 @@ export const FormModal = ({ closeModal, toggle }) => {
   }
 
   const handleSubmit = () => {
-    console.log(query)
     setQuery(initForm)
     ModalCloser()
   }
