@@ -1,5 +1,4 @@
 import { Hero } from '../../components/ScholarshipsComponents/Hero'
-import { HeroOnTop } from '../../components/ScholarshipsComponents/HeroOnTop'
 import { OtherServices } from '../../components/ScholarshipsComponents/OtherServices'
 import { EmbarkYourJourney } from '../../components/ScholarshipsComponents/EmbarkYourJourney'
 import { FutureInYourHands } from '../../components/ScholarshipsComponents/FutureInYourHands'
@@ -11,7 +10,6 @@ export const Scholarships = () => {
   return (
     <>
         <Hero />
-        <HeroOnTop/>
         <OtherServices/>
         <EmbarkYourJourney/>
         <FutureInYourHands/>

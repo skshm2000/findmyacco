@@ -13,7 +13,14 @@ export const FAQs = () => {
   return (
     <>
     <Stack
-    w='60%'
+    w={{
+      base: '80%',
+      sm: '80%',
+      md: '80%',
+      lg: '60%',
+      xl: '60%',
+      '2xl': '60%',
+    }}
     m='auto'
     mt='100px'
     spacing={'70px'}
