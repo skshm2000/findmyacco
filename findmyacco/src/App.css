@@ -1,4 +1,13 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/Poppins/Poppins-Black.ttf");
+}
+
+*{
+  font-family: "Poppins";
+}
+
 html, body {
   margin: 0;
   overflow: auto;
-}
+ }
