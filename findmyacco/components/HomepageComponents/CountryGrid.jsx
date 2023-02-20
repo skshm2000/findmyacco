@@ -1,6 +1,12 @@
 import React from 'react';
 import { Grid, GridItem,Box,Flex ,Text,Button} from '@chakra-ui/react'
-import {SlEnergy} from "react-icons/sl"
+import {SlEnergy} from "react-icons/sl";
+import unitedKingdom from "./IMAGES/unitedKingdom.jpg";
+import Canada from "./IMAGES/Canada.jpg";
+import France from "./IMAGES/France.jpg";
+import Germany from "./IMAGES/Germany.jpg";
+import Italy from "./IMAGES/Italy.jpg";
+import Australia from "./IMAGES/Australia.jpg";
 
 const CountryGrid = () => {
   return (
@@ -34,7 +40,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002444_cater-1.jpg')" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={unitedKingdom} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}
   >
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white"  _hover={{
         background:"black",
@@ -44,7 +50,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002459_cater-2%20(1).jpg')"backgroundSize={"cover"} backgroundRepeat={"no-repeat"}
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={Australia} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}
   >
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white"
   _hover={{
@@ -55,7 +61,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002475_cater-4.jpg')" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={France} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white" 
   _hover={{
     background:"black",
@@ -65,7 +71,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002490_cater-5.jpg')" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={Canada} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white" 
   _hover={{
     background:"black",
@@ -75,7 +81,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002505_cater-6.jpg')" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={Germany} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white" 
   _hover={{
     background:"black",
@@ -85,7 +91,7 @@ const CountryGrid = () => {
   <GridItem 
   borderRadius="12px"
   h={"300px"}
-  colSpan={1} bg='papayawhip' position="relative" backgroundImage="url('https://www.findmyacco.com/uploads/1664002518_cater-7.jpg')" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+  colSpan={1} bg='papayawhip' position="relative" backgroundImage={Italy} backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white" _hover={{
         background:"black",
         
