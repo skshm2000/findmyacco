@@ -3,16 +3,21 @@ Modal,
 ModalOverlay,
 ModalContent,
 ModalHeader,
-ModalFooter,
 ModalBody,
 Button,
 ModalCloseButton,
 useDisclosure,
 Text,
 Input,
-Divider
+Divider,
+Spinner,
+Image,
+Flex
 } from '@chakra-ui/react'
 import { useEffect, useState } from 'react'
+import axios from 'axios'
+import tick from './Assets/tick.gif'
+
 
 const initForm = {
     firstName:'',
@@ -22,9 +27,14 @@ const initForm = {
     university:''
 }
 
+const API = import.meta.env.VITE_NEW_SSQUERY_API
+
 export const FormModal = ({ closeModal, toggle }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [ query, setQuery ] = useState(initForm)
+  const [ loading, setLoading ] = useState(false)
+  const [ error, setError ] = useState(false)
+  const [ complete, setComplete ] = useState(false)
   
   const ModalCloser = ()=>{
     onClose()
@@ -40,11 +50,28 @@ export const FormModal = ({ closeModal, toggle }) => {
     })
   }
 
-  const handleSubmit = () => {
-    setQuery(initForm)
-    ModalCloser()
+  const handleSubmit = async () => {
+    setLoading(true)
+    try {
+        const res = await axios.post(API, query)
+        const data = await res.data
+        if(!data.error){
+            setLoading(false)     
+            setTimeout(()=>{
+                ModalCloser()
+            }, 5000)
+            setComplete(true)
+            setError(false)
+            setQuery(initForm)
+        } else {
+            setError(true)
+        }
+        setLoading(false)     
+    } catch (error) {
+        setLoading(false)   
+        setError(true)
+    }
   }
-
   useEffect(()=>{
     if(!toggle){
         onClose()
@@ -87,7 +114,16 @@ export const FormModal = ({ closeModal, toggle }) => {
                         University
                         <Input onChange={handleOnChange} name='university' placeholder="Christ's" mb='10px' />
                     </label>
-                    <Button onClick={handleSubmit} mt='15px' mb='20px' w='100%'>Submit</Button>
+                    <Text color='red' hidden={!error}>Something went wrong! Try Again</Text>
+                    { !loading && !error && !complete && <Button onClick={handleSubmit} mt='15px' mb='20px' w='100%'>Submit</Button> }
+                    { loading &&  <Spinner ml='7%' /> }
+                    { error && <Button onClick={handleSubmit} mt='15px' mb='20px' w='100%'>Submit</Button> }
+                    { complete && <Flex
+                    alignItems={'center'}
+                    >
+                        <Image w='20%' src={tick} />
+                        <Text>Our team will contact you soon!</Text>
+                        </Flex> }
                 </form>
             </ModalBody>
             </ModalContent>

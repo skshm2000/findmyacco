@@ -1,22 +1,25 @@
 import { Text, Box, Button, Heading, SimpleGrid,Image } from '@chakra-ui/react';
 import React from 'react';
 import "../../src/index.css"
+import {SlEnergy} from "react-icons/sl"
 const CitiesGrid = () => {
   return (
-    <Box p="20px"display={"flex"} flexDir="column" gap="20px">
-        <Box display={"flex"} flexDir={{base:"column",md:"row"}} gap={{base:"20px",md:"0px"}} fontFamily="" justifyContent="space-between"><Text fontSize={"2xl"} fontWeight="800">Find student housing in popular cities</Text> <Button maxW={"150px"} color="white" bgColor="rgb(20,61,89)" _hover={{color:"black",bgColor:"rgb(244,180,26)"}} >Get Expert Help</Button></Box>
-        <SimpleGrid columns={{base:1,sm:2,lg:4}} gap="20px">
-          <Box  H={"400px"}>
-          <Image objectFit={"cover"} src="https://findmyacco.com/uploads/1664002827_city-2.jpg"></Image>
+    <Box mt="50px" p="20px" px="10%" display={"flex"} flexDir="column" gap="20px">
+        <Box display={"flex"} alignItems="center" flexDir={{base:"column",md:"row"}} gap={{base:"20px",md:"0px"}} fontFamily="" justifyContent="space-between"><Text fontSize={"2xl"} fontWeight="800">Find student housing in popular cities</Text>  <Button bg='rgb(20,61,89)' textColor={"white"} leftIcon={<SlEnergy/>}  my="20px" ml="20px" 
+      _hover={{
+        background: "rgb(244,180,26)",
+        color:"black"
+      }}>Get Expert Help!</Button></Box>
+        <SimpleGrid columns={{base:1,md:2,lg:4}} spacing="20px">
+
+         <Box  minH={"400px"} backgroundImage="url(https://findmyacco.com/uploads/1664002827_city-2.jpg)" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
           </Box>
-          <Box  maxH={"400px"}>
-          <Image objectFit={"cover"}  src="https://findmyacco.com/uploads/1664003220_city-4.jpg"></Image>
+          <Box  minH={"400px"} backgroundImage="url(https://findmyacco.com/uploads/1664003220_city-4.jpg)" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
+          
           </Box>
-          <Box  maxH={"400px"}>
-          <Image objectFit={"cover"}  src="https://findmyacco.com/uploads/1664003201_city-3.jpg"></Image>
+          <Box   minH={"400px"} backgroundImage="url(https://findmyacco.com/uploads/1664003201_city-3.jpg)" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
           </Box>
-          <Box  maxH={"400px"}>
-          <Image objectFit={"cover"}  src="https://findmyacco.com/uploads/1664002805_city-1.jpg"></Image>
+          <Box  minH={"400px"} backgroundImage="url(https://findmyacco.com/uploads/1664002805_city-1.jpg)" backgroundSize={"cover"} backgroundRepeat={"no-repeat"}>
           </Box>
         </SimpleGrid>
     </Box>

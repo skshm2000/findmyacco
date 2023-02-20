@@ -36,7 +36,7 @@ const DeleteSSQuery = async (id) => {
     }
 }
 
-const NewSSQuery = async ({ firstName, lastName, number, univ, email }) => {
+const NewSSQuery = async ({ firstName, lastName, phoneNumber, university, email }) => {
     try {
         const date = new Date();
 
@@ -45,7 +45,7 @@ const NewSSQuery = async ({ firstName, lastName, number, univ, email }) => {
         let year = date.getFullYear();
 
         let currentDate = `${day}-${month}-${year}`;
-        const query = new SSQueryModel({firstName, lastName, email, university:univ, phoneNumber:number, date:currentDate})
+        const query = new SSQueryModel({firstName, lastName, email, university, phoneNumber, date:currentDate})
         await query.save()
         const mail = {
             from: 'contact@findmyacco.com',

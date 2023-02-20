@@ -1,14 +1,16 @@
 import Allroutes from './pages/Allroutes'
-import './App.css'
+import Navbar from '../components/HomepageComponents/Navbar'
 import Footer from '../components/HomepageComponents/Footer'
-
+import './App.css'
 function App() {
   
 
   return (
     <>
-    <Allroutes />
-    {/* <Footer /> */}
+    <Navbar></Navbar>
+      <Allroutes/>
+    <Footer/>
+
     </>
   )
 }
