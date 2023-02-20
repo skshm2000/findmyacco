@@ -21,6 +21,41 @@ const accordionData = [
     icon: MdHome,
     options: ["Dashboard", "Inquiry", "Contact_admin"],
   },
+  {
+    title: "About",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  },
+  {
+    title: "Education",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  },
+  {
+    title: "Scholarship",
+    icon: MdHome,
+    options: ["Dashboard", "Scholarship_Inquiry", "Contact_admin"],
+  },
+  {
+    title: "Partners",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  },
+  {
+    title: "FAQs",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  },
+  {
+    title: "Blog",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  },
+  {
+    title: "Contact",
+    icon: MdHome,
+    options: ["Dashboard", "Inquiry", "Contact_admin"],
+  }
 ]
 
 const Admin = () => {
@@ -44,11 +79,10 @@ const Admin = () => {
             {...props}
           >
             <Flex px="4" py="5" align="center">
-              <Image src="https://www.findmyacco.com/image/logo.png" alt="
-              FindMyAccoLogo" width={"80px"} margin="auto"/>
+              <Image src="https://www.findmyacco.com/image/logo.png" alt="FindMyAccoLogo" width={"80px"} margin="auto"/>
             </Flex>
             <Accordion allowToggle color={"white"}>
-                  {accordionData.map((item,i)=>(<AccordionItem key={i} border="none" _groupFocusWithin={{border:"red"}}>
+                  {accordionData.map((item,i)=>(<AccordionItem key={i} border="none" my="20px">
                     <h2>
                       <AccordionButton _hover={{border:"none", }} _expanded={{border:"none", bg:"#F4B41A", color:"black"}} justifyContent={"space-between"} borderRadius={"0px"}>
                         <Flex alignItems={"center"} gap="10px" w="80%">
@@ -60,7 +94,7 @@ const Admin = () => {
                     </h2>
                     <AccordionPanel>
                       {item.options.map((option,j)=>(
-                        <List key={j}>
+                        <List key={j} pl="30px" my="20px" _hover={{color:"#F4B41A"}}>
                           <Link to={option!="Dashboard"?`${option}`:"/admin"}>{option}</Link>
                         </List>
                       ))}
@@ -147,7 +181,7 @@ const Admin = () => {
                 </Flex>
               </Flex>
       
-              <Box as="main" p="4" >
+              <Box as="main" p="4">
                 <Outlet/>
                 {/* Add content here, remove div below  */}
                 {/* <Box borderWidth="4px" borderStyle="dashed" rounded="md" h="96" /> */}
