@@ -24,9 +24,14 @@ const HostaHomeSchema = new Schema({
     date:{
         required:true,
         type: String
+    },
+    completed:{
+        required:true,
+        type: Boolean,
+        default:false
     }
 })
 
-const HostAHomeModel = model('query', HostaHomeSchema)
+const HostAHomeModel = model('HostAHome', HostaHomeSchema)
 
 module.exports = HostAHomeModel

@@ -36,14 +36,29 @@ const DeleteQuery = async (id) => {
     }
 }
 
-const NewQuery = async ({ name, number, univ, email }) => {
+const MarkComplete = async (id) => {
+    try {
+        const queries = await HostAHomeModel.findOneAndUpdate({_id:id}, {completed:true})
+        return {
+            error:false
+        }
+    } catch (error) {
+        return {
+            error:true,
+            data:error,
+            msg:'Something went wrong'
+        }   
+    }
+}
+
+const NewQuery = async ({ name, phoneNumber, university, email, area }) => {
     try {
         const date = new Date();
         let day = date.getDate();
         let month = date.getMonth() + 1;
         let year = date.getFullYear();
         let currentDate = `${day}-${month}-${year}`;
-        const query = new HostAHomeModel({name, email, university:univ, phoneNumber:number, date:currentDate})
+        const query = new HostAHomeModel({name, email, university, phoneNumber, area, date:currentDate})
         await query.save()
         const mail = {
             from: 'contact@findmyacco.com',
@@ -81,4 +96,4 @@ const SearchQuery = async(query) => {
     }
 }
 
-module.exports = { GetQueries, DeleteQuery, NewQuery, SearchQuery }
+module.exports = { GetQueries, DeleteQuery, NewQuery, SearchQuery, MarkComplete }

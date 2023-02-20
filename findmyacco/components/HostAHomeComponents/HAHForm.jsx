@@ -1,14 +1,17 @@
 import { Input, Button, Spinner, Image, Text, Flex, Heading, Stack } from '@chakra-ui/react'
 import { useState } from 'react'
+import axios from 'axios'
+import tick from '../ScholarshipsComponents/Assets/tick.gif'
 
 const initForm = {
-    firstName:'',
-    lastName:'',
+    name:'',
     email:'',
     phoneNumber:'',
     university:'',
     area:'',
 }
+
+const API = import.meta.env.VITE_NEW_HOSTAHOME_API
 
 export default function HAHForm() {
     const [ query, setQuery ] = useState(initForm)
@@ -36,25 +39,23 @@ export default function HAHForm() {
     
       const handleSubmit = async () => {
         setLoading(true)
-        // try {
-        //     const res = await axios.post(API, query)
-        //     const data = await res.data
-        //     if(!data.error){
-        //         setLoading(false)     
-        //         setTimeout(()=>{
-        //             ModalCloser()
-        //         }, 5000)
-        //         setComplete(true)
-        //         setError(false)
-        //         setQuery(initForm)
-        //     } else {
-        //         setError(true)
-        //     }
-        //     setLoading(false)     
-        // } catch (error) {
-        //     setLoading(false)   
-        //     setError(true)
-        // }
+        try {
+            const res = await axios.post(API, query)
+            const data = await res.data
+            console.log(data)
+            if(!data.error){
+                setLoading(false)
+                setComplete(true)
+                setError(false)
+                setQuery(initForm)
+            } else {
+                setError(true)
+            }
+            setLoading(false)     
+        } catch (error) {
+            setLoading(false)   
+            setError(true)
+        }
       }
 
     return (
@@ -72,16 +73,12 @@ export default function HAHForm() {
         <Text textAlign={'center'} my='10px' >Get In Touch & Contact To Reach Us!</Text>
         <form action="">
             <label htmlFor="">
-                First Name*
-                <Input onChange={handleOnChange} name='firstName' mb='10px' required placeholder='Jane' />
-            </label>
-            <label htmlFor="">
-                Last Name*
-                <Input onChange={handleOnChange} name='lastName' mb='10px' required placeholder='Smith' />
+                Name*
+                <Input onChange={handleOnChange} name='name' mb='10px' required placeholder='Jane Smith' />
             </label>
             <label htmlFor="">
                 Phone Number
-                <Input onChange={handleOnChange} name='phoneNumber' mb='10px' placeholder='Jane' />
+                <Input onChange={handleOnChange} name='phoneNumber' mb='10px' placeholder='Enter your phone number' />
             </label>
             <label htmlFor="">
                 Email
