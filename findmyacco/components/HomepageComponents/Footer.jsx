@@ -109,7 +109,7 @@ Findmyacco is an intercontinental housing platform that assists students with to
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader ><Text fontSize={"22px"} color="white">DISCOVER</Text></ListHeader>
-            <Link className='footerLink' to={'/'}>Host A Home</Link>
+            <Link className='footerLink' to={'/host_a_home'}>Host A Home</Link>
             <Link className='footerLink' to={'/'}>FAQs</Link>
             <Link className='footerLink' to={'/'}>Education Loans</Link>
             <Link className='footerLink' to={'/scholarships'}>Scholarships</Link>

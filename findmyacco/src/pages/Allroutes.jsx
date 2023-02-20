@@ -5,12 +5,14 @@ import InquiryTable from '../../components/Admin/InquiryTable';
 import Admin from './Admin';
 import Homepage from './Homepage';
 import { Scholarships } from './Scholarships';
+import HostAHome from './HostAHome';
 const Allroutes = () => {
   return (
     <>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/scholarships" element={<Scholarships />} />
+          <Route path="/host_a_home" element={<HostAHome />} />
           <Route path='admin' element={<Admin/>}>
             <Route index element={<Dashboard/>}/>
             <Route path='inquiry' element={<InquiryTable/>}/>
