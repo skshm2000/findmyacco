@@ -1,4 +1,4 @@
-import { INQUIRY_FAILURE, INQUIRY_LOADING, GET_INQUIRIES, DELETE_INQUIRY, TOGGLE_STATUS } from "./inquiry.types";
+import { INQUIRY_FAILURE, INQUIRY_LOADING, GET_INQUIRIES, DELETE_INQUIRY, TOGGLE_STATUS } from "./SSinquiry.types";
 
 const initialState = {
     loading: false,
@@ -7,7 +7,7 @@ const initialState = {
     totalInquiries:1
 }
 
-export const inquiryReducer = (state = initialState, action) => {
+export const SSinquiryReducer = (state = initialState, action) => {
     switch (action.type) {
         case INQUIRY_LOADING:{
             return{

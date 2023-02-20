@@ -26,7 +26,7 @@ import {
 
 //   import "./inquiry.css"
 
-  import { deleteInquiry, getAllInquiry, searchInquiries, updateStatus } from '../../redux/inquiry/inquiry.actions';
+  import { deleteInquiry, getAllInquiry, searchInquiries, updateStatus } from '../../redux/SSinquiry/SSinquiry.actions';
   import { RiDeleteBinFill} from 'react-icons/ri';
   import { BiSearch} from 'react-icons/bi';
   import { BsCheckLg} from 'react-icons/bs';
@@ -34,9 +34,9 @@ import {
   import {FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { useDispatch, useSelector } from 'react-redux';
 
-const InquiryTable = () => {
+const ScholarshipInquiryTable = () => {
     const dispatch = useDispatch();
-    const inquiry = useSelector(store => store.inquiry);
+    const inquiry = useSelector(store => store.SSinquiry);
     const [page,setPage] = useState(1);
     const [text, setText]  = useState("");
     // const [statusChanged, setStatusChanged] = useState(false);
@@ -110,6 +110,7 @@ const InquiryTable = () => {
            onClose(); 
         },1000)
     }
+
     useEffect(()=>{
         dispatch(getAllInquiry(page));
     },[page])
@@ -130,7 +131,7 @@ const InquiryTable = () => {
     <TableContainer w="95%" m="auto">
         
         {/* <div className='XYZ'>Hello</div> */}
-        <Heading mt="20px" mb="20px" size={"lg"} textAlign="center">INQUIRY DETAILS</Heading>
+        <Heading mt="20px" mb="20px" size={"lg"} textAlign="center">SCHOLARSHIP INQUIRY DETAILS</Heading>
         <InputGroup w="400px" m="auto" my="20px" border={"1px solid"} borderRadius="7px" >
             <Input placeholder="Search by name or by university" border={"none"} onChange={handleChange}></Input>
             <InputRightElement>
@@ -149,19 +150,19 @@ const InquiryTable = () => {
                 <Th textAlign="center" border={"1px solid black"} fontSize="16px" bg="yellow.400" color={"black"}>Action</Th>
             </Tr>
             </Thead>
-            <Tbody w="80%" >
+            <Tbody w="80%">
             {inquiry?.data?.map((row,i)=>(
             <Tr key={i} w="80%">
                 <Td textAlign="center" border={"1px solid black"} >{(page-1)*15 + i+1}</Td>
-                <Td textAlign="center" border={"1px solid black"} >{row.name}</Td>
+                <Td textAlign="center" border={"1px solid black"} >{`${row.firstName} ${row.lastName}`}</Td>
                 <Td textAlign="center" border={"1px solid black"} >{row.email}</Td>
                 <Td textAlign="center" border={"1px solid black"} >{row.phoneNumber}</Td>
                 <Td textAlign="center" border={"1px solid black"}  >{row.university}</Td>
                 <Td textAlign="center" border={"1px solid black"} >
-                    <Button variant={"ghost"} boxShadow="md" size={"md"} bg="blue.100" mr="10px" onClick={()=>toggleStatus(row._id, onOpen,onClose)} >
+                    <Button variant={"ghost"} boxShadow="md" size={"md"} bg="blue.50" mr="10px" onClick={()=>toggleStatus(row._id, onOpen,onClose)} >
                     {row.completed ? <Icon as={BsCheckLg} color={"green.500"}/>:<Icon as={MdOutlinePendingActions} color={"red.500"} />}
                     </Button>
-                    <Button variant={"ghost"} boxShadow="md" size={"md"} bg="red.100" onClick={()=>handleDelete(row._id)}><Icon as={RiDeleteBinFill} color={"red.500"} /></Button>
+                    <Button variant={"ghost"} boxShadow="md" size={"md"} bg="red.50" onClick={()=>handleDelete(row._id)}><Icon as={RiDeleteBinFill} color={"red.500"} /></Button>
                 </Td>
             </Tr>))}
             </Tbody>
@@ -178,4 +179,4 @@ const InquiryTable = () => {
   )
 }
 
-export default InquiryTable
+export default ScholarshipInquiryTable
