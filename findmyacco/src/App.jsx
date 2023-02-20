@@ -1,14 +1,15 @@
-import { useState } from 'react'
-// import './App.css'
-import Admin from '../pages/Admin'
-import Allroutes from '../pages/Allroutes'
+import Allroutes from './pages/Allroutes'
+import './App.css'
+import Footer from '../components/HomepageComponents/Footer'
 
 function App() {
+  
 
   return (
-    <div className="App" >
-      <Allroutes/>
-    </div>
+    <>
+    <Allroutes />
+    <Footer />
+    </>
   )
 }
 

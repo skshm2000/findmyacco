@@ -1,7 +1,7 @@
 import React from 'react';
 import {Routes,Route} from "react-router-dom"
-import Dashboard from '../components/Admin/Dashboard';
-import InquiryTable from '../components/Admin/InquiryTable';
+import Dashboard from '../../components/Admin/Dashboard';
+import InquiryTable from '../../components/Admin/InquiryTable';
 import Admin from './Admin';
 import Homepage from './Homepage';
 import { Scholarships } from './Scholarships';
