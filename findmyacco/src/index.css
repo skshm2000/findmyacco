@@ -6,3 +6,8 @@
 *{
   font-family: "Poppins";
 } 
+
+html, body {
+  margin: 0;
+  overflow: auto;
+}

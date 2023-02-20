@@ -7,7 +7,7 @@ import { AiFillGift } from "react-icons/ai";
 import { BsGearFill } from "react-icons/bs";
 import { HiCollection, HiCode } from "react-icons/hi";
 
-import { useDisclosure, Icon, Input, Flex, Box, Text, Drawer, DrawerOverlay, DrawerContent, IconButton, InputGroup, InputLeftElement, Avatar, Image, Select, Accordion, AccordionItem, AccordionButton, AccordionIcon, List, AccordionPanel } from "@chakra-ui/react"
+import { useDisclosure, Icon, Input, Flex, Box, Text, Drawer, DrawerOverlay, DrawerContent, IconButton, InputGroup, InputLeftElement, Avatar, Image, Select, Accordion, AccordionItem, AccordionButton, AccordionIcon, List, AccordionPanel, Heading } from "@chakra-ui/react"
 import { Link, Outlet } from 'react-router-dom';
 
 const accordionData = [
@@ -45,21 +45,14 @@ const Admin = () => {
           >
             <Flex px="4" py="5" align="center">
               <Image src="https://www.findmyacco.com/image/logo.png" alt="
-              FindMyAccoLogo" width={"100px"} margin="auto"/>
+              FindMyAccoLogo" width={"80px"} margin="auto"/>
             </Flex>
             <Accordion allowToggle color={"white"}>
-              {/* <Flex
-                direction="column"
-                as="nav"
-                fontSize="sm"
-                color="white"
-                aria-label="Main Navigation"
-              > */}
                   {accordionData.map((item,i)=>(<AccordionItem key={i} border="none" _groupFocusWithin={{border:"red"}}>
                     <h2>
                       <AccordionButton _hover={{border:"none", }} _expanded={{border:"none", bg:"#F4B41A", color:"black"}} justifyContent={"space-between"} borderRadius={"0px"}>
                         <Flex alignItems={"center"} gap="10px" w="80%">
-                          {item.icon && (<Icon as={item.icon} color={"white"} />)}
+                          {item.icon && (<Icon as={item.icon} />)}
                           <Box as="span">{item.title}</Box>
                         </Flex>
                         <AccordionIcon />
@@ -73,13 +66,6 @@ const Admin = () => {
                       ))}
                     </AccordionPanel>
                   </AccordionItem>))}
-                  {/* <NavItem icon={FaRss}>Articles</NavItem>
-                  <NavItem icon={HiCollection}>Collections</NavItem>
-                  <NavItem icon={FaClipboardCheck}>Checklists</NavItem>
-                  <NavItem icon={HiCode}>Integrations</NavItem>
-                  <NavItem icon={AiFillGift}>Changelog</NavItem>
-                  <NavItem icon={BsGearFill}>Settings</NavItem> */}
-              {/* </Flex> */}
             </Accordion>
           </Box>
         );
@@ -87,8 +73,8 @@ const Admin = () => {
         return (
           <Box
             as="section"
-            bg="gray.50"
-            width={"100vw"}
+            bg="white"
+            width={"99vw"}
             _dark={{
               bg: "gray.700",
             }}
@@ -143,33 +129,25 @@ const Admin = () => {
                   icon={<FiMenu />}
                   size="sm"
                 />
-                {/* <InputGroup
-                  w="96"
-                  display={{
-                    base: "none",
-                    md: "flex",
-                  }}
-                >
-                  <InputLeftElement color="gray.500">
-                    <FiSearch />
-                  </InputLeftElement>
-                  <Input placeholder="Search for articles..." />
-                </InputGroup> */}
-      
-                <Flex align="center" gap="20px">
-                    <Avatar
-                    ml="4"
-                    size="sm"
-                    name="anubra266"
-                    src="https://avatars.githubusercontent.com/u/30869823?v=4"
-                    cursor="pointer"
-                    />
-                    <Text>John Doe</Text>
+                <Link to="/admin" >
+                  <Heading size="sm">FIND MY ACCO</Heading>
+                </Link>
+                <Flex align="center" gap="10px">
+                  
+                    <Text fontSize="12px" cursor="pointer">John Doe</Text>
+                  
+                  <Avatar
+                  // ml="4" 
+                  size="sm"
+                  name="anubra266"
+                  src="https://avatars.githubusercontent.com/u/30869823?v=4"
+                  cursor="pointer"
+                  />
+                  <Icon color="gray.500" as={FaBell} cursor="pointer" />
                 </Flex>
-                <Icon color="gray.500" as={FaBell} cursor="pointer" />
               </Flex>
       
-              <Box as="main" p="4">
+              <Box as="main" p="4" >
                 <Outlet/>
                 {/* Add content here, remove div below  */}
                 {/* <Box borderWidth="4px" borderStyle="dashed" rounded="md" h="96" /> */}
