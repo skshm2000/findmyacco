@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const { GetQueries, DeleteQuery, NewQuery, SearchQuery } = require('../Controllers/Query.controller')
+const { GetQueries, DeleteQuery, NewQuery, SearchQuery, MarkComplete } = require('../Controllers/hostahome.controller')
 
 const HostAHome = Router()
 
@@ -36,10 +36,21 @@ HostAHome.delete('/admin/deleteQuery/:id', async (req, res)=>{
     }    
 })
 
+HostAHome.get('/admin/markComplete/:id', async (req, res)=>{
+    const { id } = req.params
+    const data = await MarkComplete(id)
+    
+    if(data.error){
+        return res.status(201).send(data)   
+    } else {
+        return res.status(200).send(data)
+    }    
+})
+
 
 HostAHome.post('/user/newQuery', async (req, res)=>{
-    const { name, number, univ, email } = req.body
-    const data = await NewQuery({ name, number, univ, email })
+    const { name, phoneNumber, university, email, area } = req.body
+    const data = await NewQuery({ name, phoneNumber, university, email, area })
 
     if(data.error){
         return res.status(201).send(data)  
