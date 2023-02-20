@@ -27,8 +27,8 @@ SSQueryRouter.delete('/admin/deleteSSQuery/:id', async (req, res)=>{
 
 
 SSQueryRouter.post('/user/newSSQuery', async (req, res)=>{
-    const { firstName, lastName, number, univ, email } = req.body
-    const data = await NewSSQuery({ firstName, lastName, number, univ, email })
+    const { firstName, lastName, phoneNumber, university, email } = req.body
+    const data = await NewSSQuery({ firstName, lastName, phoneNumber, university, email })
 
     if(data.error){
         return res.status(201).send(data)  
