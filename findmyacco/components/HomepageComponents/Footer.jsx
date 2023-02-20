@@ -3,7 +3,6 @@ import {
   Box,
   chakra,
   Container,
-  Link,
   SimpleGrid,
   Stack,
   Text,
@@ -12,7 +11,6 @@ import {
   IconButton,
   useColorModeValue,
   Flex
-  
 } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
@@ -20,6 +18,8 @@ import {AiFillHome} from 'react-icons/ai'
 import { BiMailSend } from 'react-icons/bi';
 import {MdEmail} from "react-icons/md";
 import {AiFillPhone} from "react-icons/ai"
+import { NavLink, Link } from 'react-router-dom'
+import './footer.css'
 
 const Logo = (props) => {
   return (
@@ -78,9 +78,9 @@ const ListHeader = ({ children }) => {
 
 const Footer = () => {
   return (
-    <Box w="100vw">
+    <Box w="100%">
     <Box
-    w="100vw"
+    w="100%"
     m="auto"
       bg={"black"}
       color={useColorModeValue('gray.700', 'gray.200')}>
@@ -93,7 +93,6 @@ const Footer = () => {
              ABOUT US
             </Box>
             <Text fontSize={'sm'} color="rgb(133,135,138)" >
-           
 Findmyacco is an intercontinental housing platform that assists students with top-tier accommodations within range of their universities.
             </Text>
             <Stack direction={'row'} spacing={6}>
@@ -110,18 +109,18 @@ Findmyacco is an intercontinental housing platform that assists students with to
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader ><Text fontSize={"22px"} color="white">DISCOVER</Text></ListHeader>
-            <Link href={'#'} color="rgb(133,135,138)"_hover={{color:"rgb(244,180,26)",ml:"5px"}}>Host A Home</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)",ml:"5px"}}>FAQs</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)",ml:"5px"}}>Education Loans</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)",ml:"5px"}}>Scholorships</Link>
+            <Link className='footerLink' to={'/'}>Host A Home</Link>
+            <Link className='footerLink' to={'/'}>FAQs</Link>
+            <Link className='footerLink' to={'/'}>Education Loans</Link>
+            <Link className='footerLink' to={'/scholarships'}>Scholarships</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader ><Text fontSize={"22px"} color="white">COMPANY</Text></ListHeader>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)" ,ml:"5px"}}>Find My Acco</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)" ,ml:"5px"}}>About Us</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)" ,ml:"5px"}}>Contact Us</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)" ,ml:"5px"}}>Partners</Link>
-            <Link href={'#'} color="rgb(133,135,138)" _hover={{color:"rgb(244,180,26)" ,ml:"5px"}}>Blog</Link>
+            <Link className='footerLink' to={'/'}>About Us</Link>
+            <Link className='footerLink' to={'/'}>Contact Us</Link>
+            <Link className='footerLink' to={'/'}>Partners</Link>
+            <Link className='footerLink' to={'/'}>Blog</Link>
+            <Link className='footerLink' to={'/'}>Find My Acco</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader ><Text fontSize={"22px"} color="white">CONTACT INFO</Text></ListHeader>
