@@ -5,7 +5,7 @@ const GetQueries = async (page) => {
     page = +page
     page -= 1
     try {
-        const queries = await QueryModel.find().sort({_id:-1}).skip(page*10).limit(10);
+        const queries = await QueryModel.find().sort({_id:-1}).skip(page*15).limit(15);
         const total = await QueryModel.find().countDocuments();
         return {
             error:false,
@@ -36,6 +36,24 @@ const DeleteQuery = async (id) => {
     }
 }
 
+const UpdateStatus = async (id) => {
+    try {
+        const queries = await QueryModel.findById({_id:id});
+        queries.completed = !queries.completed;
+        queries.save();
+        return {
+            error:false,
+            msg:"Status updated successfully"
+        }
+    } catch (error) {
+        return {
+            error:true,
+            data:error,
+            msg:'Something went wrong'
+        }   
+    }
+}
+
 const NewQuery = async ({ name, number, univ, email }) => {
     try {
         const date = new Date();
@@ -43,7 +61,7 @@ const NewQuery = async ({ name, number, univ, email }) => {
         let month = date.getMonth() + 1;
         let year = date.getFullYear();
         let currentDate = `${day}-${month}-${year}`;
-        const query = new QueryModel({name, email, university:univ, phoneNumber:number, date:currentDate})
+        const query = new QueryModel({name, email, university:univ, phoneNumber:number, date:currentDate, completed:false})
         await query.save()
         const mail = {
             from: 'contact@findmyacco.com',
@@ -81,4 +99,4 @@ const SearchQuery = async(query) => {
     }
 }
 
-module.exports = { GetQueries, DeleteQuery, NewQuery, SearchQuery }
+module.exports = { GetQueries, DeleteQuery, NewQuery, SearchQuery, UpdateStatus }
