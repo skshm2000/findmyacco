@@ -12,7 +12,7 @@ const CountryGrid = () => {
   return (
    <Box
    mt={"20px"}
-   w='100vw'
+  
    >
      <Grid 
      m='auto'
