@@ -63,8 +63,22 @@ export const RRR = () => {
             m='auto'
             >
                 <Stack
-                w='25%'
-                h='37%'
+                w={{
+                  base: '30%',
+                  sm: '15%',
+                  md: '37%',
+                  lg: '25%',
+                  xl: '25%',
+                  '2xl': '20%',
+                }}
+                h={{
+                  base: '40%',
+                  sm: '37%',
+                  md: '37%',
+                  lg: '40%',
+                  xl: '40%',
+                  '2xl': '45%',
+                }}
                 position={'absolute'}
                 top={'-45px'}
                 transform={'rotate(45deg)'}
@@ -102,8 +116,22 @@ export const RRR = () => {
             m='auto'
             >
                 <Stack
-                w='25%'
-                h='37%'
+                w={{
+                  base: '30%',
+                  sm: '15%',
+                  md: '37%',
+                  lg: '25%',
+                  xl: '25%',
+                  '2xl': '20%',
+                }}
+                h={{
+                  base: '40%',
+                  sm: '37%',
+                  md: '37%',
+                  lg: '40%',
+                  xl: '40%',
+                  '2xl': '45%',
+                }}
                 position={'absolute'}
                 top={'-45px'}
                 transform={'rotate(45deg)'}
@@ -141,8 +169,22 @@ export const RRR = () => {
             m='auto'
             >
                 <Stack
-                w='25%'
-                h='37%'
+                w={{
+                  base: '30%',
+                  sm: '15%',
+                  md: '37%',
+                  lg: '25%',
+                  xl: '25%',
+                  '2xl': '20%',
+                }}
+                h={{
+                  base: '40%',
+                  sm: '37%',
+                  md: '37%',
+                  lg: '40%',
+                  xl: '40%',
+                  '2xl': '45%',
+                }}
                 position={'absolute'}
                 top={'-45px'}
                 transform={'rotate(45deg)'}

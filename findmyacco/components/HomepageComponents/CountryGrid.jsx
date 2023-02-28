@@ -1,8 +1,10 @@
 import React from 'react';
 import { Grid, GridItem,Box,Flex ,Text,Button} from '@chakra-ui/react'
 import {SlEnergy} from "react-icons/sl"
+import { useNavigate } from 'react-router-dom';
 
 const CountryGrid = () => {
+  const nav = useNavigate()
   return (
    <Box
    mt={"20px"}
@@ -38,8 +40,11 @@ const CountryGrid = () => {
   >
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white"  _hover={{
         background:"black",
-        
-      }}>United Kingdom</Button>
+      }}
+      onClick={()=>{
+        nav('/country?name=uk')
+      }}
+      >United Kingdom</Button>
   </GridItem>
   <GridItem 
   borderRadius="12px"
