@@ -1,5 +1,5 @@
 import { Input, Button, Spinner, Image, Text, Flex, Heading, Stack } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import tick from '../ScholarshipsComponents/Assets/tick.gif'
 
@@ -57,6 +57,10 @@ export default function HAHForm() {
             setError(true)
         }
       }
+
+      useEffect(()=>{
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <>
