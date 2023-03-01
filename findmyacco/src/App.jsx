@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Allroutes from './pages/Allroutes'
 import Navbar from '../components/HomepageComponents/Navbar'
 import Footer from '../components/HomepageComponents/Footer'
@@ -11,6 +10,7 @@ function App() {
     <Navbar></Navbar>
       <Allroutes/>
     <Footer/>
+
     </>
   )
 }

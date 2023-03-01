@@ -1,16 +1,18 @@
 import React from 'react';
 import { Grid, GridItem,Box,Flex ,Text,Button} from '@chakra-ui/react'
 import {SlEnergy} from "react-icons/sl"
+import { useNavigate, useParams } from 'react-router-dom';
 
 const CountryGrid = () => {
+  const nav = useNavigate()
   return (
    <Box
    mt={"20px"}
-   w='100vw'
+   w='100%'
    >
      <Grid 
      m='auto'
-     w="80vw"
+     w="80%"
      h='600px'
   templateRows={{sm:"repeat(7,1fr)",md:"repeat(4,1fr)",lg:'repeat(2, 1fr)'}}
   templateColumns={{sm:"repeat(1,1fr)",md:"repeat(2,1fr)",lg:'repeat(4, 1fr)'}}
@@ -38,8 +40,11 @@ const CountryGrid = () => {
   >
   <Button position="absolute" bottom="20px" left="20px" backgroundColor="blackAlpha.600" color="white"  _hover={{
         background:"black",
-        
-      }}>United Kingdom</Button>
+      }}
+      onClick={()=>{
+        nav('/uk')
+      }}
+      >United Kingdom</Button>
   </GridItem>
   <GridItem 
   borderRadius="12px"

@@ -16,6 +16,15 @@ const QuerySchema = new Schema({
     university:{
         type:String,
         required:true
+    },
+    completed:{
+        type:Boolean,
+        required:true,
+        default: false
+    },
+    date:{
+        required:true,
+        type: String
     }
 })
 

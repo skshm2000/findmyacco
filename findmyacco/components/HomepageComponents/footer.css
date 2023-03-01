@@ -1,0 +1,9 @@
+.footerLink {
+    color: rgb(133,135,138);
+    transition: margin-left 50ms ease-out 50ms
+}
+
+.footerLink:hover {
+    color: rgb(244,180,26);
+    margin-left: 7px;
+}
