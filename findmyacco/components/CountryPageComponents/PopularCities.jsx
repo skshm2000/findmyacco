@@ -27,7 +27,7 @@ export const PopularCities = ({ name }) => {
             position={'relative'}
             alignItems={'center'}
             onClick={()=>{
-                nav(`/country/city?country=${name}&city=Loughborough`)
+                nav(`/${name}/Loughborough`)
             }}
             >
                 <Image
@@ -52,7 +52,7 @@ export const PopularCities = ({ name }) => {
             position={'relative'}
             alignItems={'center'}
             onClick={()=>{
-                nav(`/country/city?country=${name}&city=Nottingham`)
+                nav(`/${name}/Nottingham`)
             }}
             >
                 <Image
@@ -77,7 +77,7 @@ export const PopularCities = ({ name }) => {
             position={'relative'}
             alignItems={'center'}
             onClick={()=>{
-                nav(`/country/city?country=${name}&city=Exeter`)
+                nav(`/${name}/Exeter`)
             }}
             >
                 <Image
@@ -102,7 +102,7 @@ export const PopularCities = ({ name }) => {
             position={'relative'}
             alignItems={'center'}
             onClick={()=>{
-                nav(`/country/city?country=${name}&city=Leicester`)
+                nav(`/${name}/Leicester`)
             }}
             >
                 <Image

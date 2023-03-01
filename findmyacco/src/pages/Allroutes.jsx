@@ -16,8 +16,8 @@ const Allroutes = () => {
           <Route path="/" element={<Homepage />} />
           <Route path="/scholarships" element={<Scholarships />} />
           <Route path="/host_a_home" element={<HostAHome />} />
-          <Route path="/country" element={<SingleCountry />} />
-          <Route path="/country/city" element={<SingleCity />} />
+          <Route path="/:country" element={<SingleCountry />} />
+          <Route path="/:country/:city" element={<SingleCity />} />
           <Route path='admin' element={<Admin/>}>
             <Route index element={<Dashboard/>}/>
             <Route path='inquiry' element={<InquiryTable/>}/>

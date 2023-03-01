@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, GridItem,Box,Flex ,Text,Button} from '@chakra-ui/react'
 import {SlEnergy} from "react-icons/sl"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const CountryGrid = () => {
   const nav = useNavigate()
@@ -42,7 +42,7 @@ const CountryGrid = () => {
         background:"black",
       }}
       onClick={()=>{
-        nav('/country?name=uk')
+        nav('/uk')
       }}
       >United Kingdom</Button>
   </GridItem>
