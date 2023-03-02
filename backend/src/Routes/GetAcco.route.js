@@ -1,13 +1,13 @@
 const { Router } = require('express')
-const { GetAccoByCity } = require('../Controllers/GetAcco.cotroller')
+const { GetAccoByLandlord } = require('../Controllers/GetAcco.cotroller')
 
 const GetAcco = Router()
 
 GetAcco.get('/', async (req, res)=>{
-    const { city } = req.query
+    const { landlord } = req.query
     let query = req.query
     
-    let data = await GetAccoByCity(city)
+    let data = await GetAccoByLandlord(landlord)
 
     if(data.error) {
         res.status(201).send(data)
