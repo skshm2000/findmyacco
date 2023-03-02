@@ -10,7 +10,7 @@ export const SingleCity = () => {
     let res = await axios.get(`${API}?city=${city}`)
     let data = await res.data
 
-    console.log(data)
+    console.log(data, 111)
   }
 
   useEffect(()=>{
