@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { Heading, Spinner } from '@chakra-ui/react'
 
-const API = import.meta.env.VITE_GETACCO_API
+const API = import.meta.env.VITE_GETLANDLORDS_API
 export const SingleCity = () => {
-  let { city } = useParams()
-  
+  const [ data, setData ] = useState([])
+  let { city, country } = useParams()
+  const nav = useNavigate()
+
   async function dataGetter() {
     let res = await axios.get(`${API}?city=${city}`)
-    let data = await res.data
-
-    console.log(data, 111)
+    let resData = await res.data
+    setData(resData.data)
   }
 
   useEffect(()=>{
@@ -19,6 +21,12 @@ export const SingleCity = () => {
 
   return (
     <>
+    { data.length==0 && <Spinner /> }
+    { data.length && <>
+      {data.map(ele=><Heading onClick={()=>{
+        nav(`/${country}/${city}?`)
+      }}>{ele.title}</Heading>)}
+    </> }
     </>
   )
 }
