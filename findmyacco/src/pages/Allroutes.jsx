@@ -9,6 +9,8 @@ import { Scholarships } from './Scholarships';
 import HostAHome from './HostAHome';
 import { SingleCountry } from './SingleCountry';
 import { SingleCity } from './SingleCity';
+import { Properties } from './Properties';
+
 const Allroutes = () => {
   return (
     <>
@@ -18,6 +20,7 @@ const Allroutes = () => {
           <Route path="/host_a_home" element={<HostAHome />} />
           <Route path="/:country" element={<SingleCountry />} />
           <Route path="/:country/:city" element={<SingleCity />} />
+          <Route path="/properties" element={<Properties />} />
           <Route path='admin' element={<Admin/>}>
             <Route index element={<Dashboard/>}/>
             <Route path='inquiry' element={<InquiryTable/>}/>
