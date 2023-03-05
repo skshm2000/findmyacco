@@ -1,12 +1,11 @@
 import React from 'react'
 import Carousel from './ImageCarousel'
-import { Heading, Stack, Divider, Flex, Button } from '@chakra-ui/react'
+import { Heading, Stack, Flex, Button } from '@chakra-ui/react'
 import { Address } from './Address'
 import { Facilities } from './Facilities'
 import PriceRange from './PriceRange'
 
 export const SingleProperty = ({ data }) => {
-    console.log(data.room_type)
   return (
     <Stack
     p='4%'
