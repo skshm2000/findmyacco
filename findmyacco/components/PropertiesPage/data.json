@@ -1,0 +1,380 @@
+{
+  "media": {
+    "photos360": [],
+    "photos": [
+      {
+        "photo": "https://public.sturents.com/photos/7279201.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279201.jpg",
+        "caption": "Cinema Room"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7076174.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7076174.jpg",
+        "caption": "Hot Beds in Spa"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7713079.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7713079.jpg",
+        "caption": ""
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279202.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279202.jpg",
+        "caption": "Gym"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279203.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279203.jpg",
+        "caption": "Entertainment Area"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/6875688.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/6875688.jpg",
+        "caption": "En-suite Bathroom"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279204.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279204.jpg",
+        "caption": "Studio Kitchen"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/6875687.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/6875687.jpg",
+        "caption": "Housekeeping Service free of charge"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279206.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279206.jpg",
+        "caption": "Entertainment Area"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279207.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279207.jpg",
+        "caption": "Spa"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279208.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279208.jpg",
+        "caption": "Study Room"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279209.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279209.jpg",
+        "caption": "Building"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7279210.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7279210.jpg",
+        "caption": "Yoga Room"
+      },
+      {
+        "photo": "https://public.sturents.com/photos/7721383.jpg",
+        "thumb": "https://public.sturents.com/photo-thumbs/7721383.jpg",
+        "caption": "Housekeeping service"
+      }
+    ],
+    "videos": ["https://www.youtube.com/watch?v=w5ryXxFLqhY"],
+    "tours": [],
+    "floorplans": ["https://public.sturents.com/floorplans/1371340.jpg"]
+  },
+  "contracts": [
+    {
+      "utilities": {
+        "broadband": true,
+        "contents_insurance": false,
+        "council_tax": false,
+        "electricity": true,
+        "gas": true,
+        "phone": false,
+        "tv_license": false,
+        "water": true
+      },
+      "book_now_url": "https://studyinntalbotstreet.tenancysign.com/tenancy/signing?booking=1&channel=M9DYXPP0QZ&contract=7Y4899GZ&id=K48V4W16Z9",
+      "viewing_url": "https://studyinntalbotstreet.tenancysign.com/viewing?availability_id=7Y4899GZ&house_id=K48V4W16Z9",
+      "prices": [
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 27"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 43"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 49"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 60"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 61"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 62"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 63"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 64"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 65"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 66"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 80"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "Room 11"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "DUMMY ROOM 35"
+        },
+        {
+          "deposit_per_person": "0.00",
+          "fee_per_person": "0.00",
+          "price_per_person_per_week": "239.00",
+          "room_name": "DUMMY ROOM 36"
+        }
+      ],
+      "end_date": "2024-08-31",
+      "min_contract_days": "358",
+      "restrictions": [],
+      "start_date": "2023-09-09",
+      "title": "Academic year - 51 weeks",
+      "disabled": false
+    }
+  ],
+  "contracts_disabled": [],
+  "room_details": [
+    {
+      "room_id": "8VOY44",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "1",
+      "floor_space": "0.00",
+      "room_name": "Room 27"
+    },
+    {
+      "room_id": "QJ9KRW",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 43"
+    },
+    {
+      "room_id": "P7EK80",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 49"
+    },
+    {
+      "room_id": "KRN64Q",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 60"
+    },
+    {
+      "room_id": "RR8KVJ",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 61"
+    },
+    {
+      "room_id": "6VOY6R",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 62"
+    },
+    {
+      "room_id": "5VOYRW",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 63"
+    },
+    {
+      "room_id": "NJQKJ5",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 64"
+    },
+    {
+      "room_id": "ZWZ9WV",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 65"
+    },
+    {
+      "room_id": "GR4JR9",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "2",
+      "floor_space": "0.00",
+      "room_name": "Room 66"
+    },
+    {
+      "room_id": "L6ZKQ9",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "3",
+      "floor_space": "0.00",
+      "room_name": "Room 80"
+    },
+    {
+      "room_id": "5VOYD6",
+      "disabled_access": false,
+      "ensuite": true,
+      "floor": "Ground",
+      "floor_space": "0.00",
+      "room_name": "Room 11"
+    },
+    {
+      "room_id": "QJYPNV",
+      "disabled_access": true,
+      "ensuite": false,
+      "floor": "D",
+      "floor_space": "0.00",
+      "room_name": "DUMMY ROOM 35"
+    },
+    {
+      "room_id": "0W3DED",
+      "disabled_access": true,
+      "ensuite": false,
+      "floor": "D",
+      "floor_space": "0.00",
+      "room_name": "DUMMY ROOM 36"
+    }
+  ],
+  "eligibility": {
+    "dss": false,
+    "female_only": false,
+    "male_only": false,
+    "pets_permitted": false,
+    "postgraduate_student": true,
+    "professional": false,
+    "smoking_permitted": false,
+    "trainee": false,
+    "undergraduate_student": true
+  },
+  "accreditations": [],
+  "energy_performance": {
+    "co2_current": 0,
+    "co2_potential": 0,
+    "eef_current": 0,
+    "eef_potential": 0,
+    "epc_certificate": "",
+    "epc_reference": ""
+  },
+  "coordinates": { "lat": "52.9562301635742200", "lng": "-1.1571199893951416" },
+  "address": {
+    "city": "Nottingham",
+    "country": "GB",
+    "postcode": "NG1 5EN",
+    "property_name": "Study Inn: Talbot Street",
+    "property_number": "80",
+    "road_name": "Talbot Street",
+    "uprn": ""
+  },
+  "property_id": "255339",
+  "bank_id": "1YEM268LZJ",
+  "bathrooms": "1",
+  "cluster_size": "1",
+  "description": "Study Inn Nottingham is conveniently located on the doorstep of Nottingham Trent University and within a short distance from the University of Nottingham. Our Nottingham all-inclusive luxury student accommodation comprises of a selection of stunning studios and elegant en-suite apartments, as well as big screen cinema, study areas, relaxing spa facilities, entertainment outlets, and a gym. With all this to offer and more, we believe Study Inn’s Talbot Street is the perfect place for you to call home.\r\n\r\nStudy Inn’s Platinum studios come complete with:\r\n- Extra room space, en-suite bathroom, fully fitted kitchen, comfy bed, wardrobe, and a spacious work desk\r\n- Smart TV, kitchen and bedding essentials, and superfast Wi-Fi\r\n- Housekeeping team who provide a regular room cleaning service with towels and bed linen replacement\r\n\r\nWithin our building you have access to:\r\n- All-inclusive bills\r\n- Wellness spa, gym & yoga studio\r\n- Study rooms\r\n- Big screen cinema\r\n- Pool and tennis table\r\n-24/7 security\r\n- Industry leading social events\r\n\r\nNO DAMAGE DEPOSIT REQUIRED | NO GUARANTOR REQUIRED",
+  "designation": "pbsa",
+  "disabled": false,
+  "facilities": [
+    "Central Heating",
+    "Cinema Room",
+    "Common Room",
+    "Fitness Studio",
+    "Games Room",
+    "Gym",
+    "Self Catered",
+    "Study Area",
+    "Study Room",
+    "Tumble Dryer",
+    "TV (communal)",
+    "Vacuum Cleaner",
+    "Vending Machine",
+    "Washing Machine",
+    "WiFi",
+    "Cooker",
+    "Freezer",
+    "Fridge",
+    "Microwave/Oven",
+    "¾ Bed",
+    "Desk & Chair",
+    "En Suite",
+    "Lockable Bedroom",
+    "TV in room",
+    "24h Security",
+    "CCTV",
+    "Fob Entry System",
+    "On Site Maintenance",
+    "Bike Storage",
+    "Cleaner",
+    "Laundry Room",
+    "Post Room",
+    "Recycling"
+  ],
+  "floor_space": "0.00",
+  "quantity": "12",
+  "quantity_available": "12",
+  "room_type": "Platinum Studio",
+  "rooms_let_individually": false
+}
