@@ -1,46 +1,38 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import axios from 'axios'
 import { Flex, Heading, SimpleGrid, Spinner, Stack } from '@chakra-ui/react'
-import { SingleProperty } from '../../components/PropertiesPage/SingleProperty'
+import { SingleProperty } from '../../components/PropertiesPageComponents/SingleProperty'
+import { useSelector, useDispatch } from 'react-redux'
+import { GetAllProperties } from '../../redux/Properties/Properties.actions'
+import { Sidebar } from '../../components/PropertiesPageComponents/Sidebar'
 
-const API = import.meta.env.VITE_GETACCOS_API
 export const Properties = () => {
   let [ searchParams ] = useSearchParams()
-  let [ properties, setProperties ] = useState([])
-  let [ error, setError ] = useState(false)
-  let [ loading, setLoading ] = useState(false)
-  async function dataGetter() {
-    setLoading(true)
-    try {
-      let res = await axios.get(`${API}?landlord=${searchParams.get("landlord")}`)
-      let data = await res.data
-      setProperties(data.data.properties)
-    } catch (error) {
-      setError(true) 
-    }
-    setLoading(false)
-  }
+  let dispatch = useDispatch()
+  let { isLoading, isError, dispData } = useSelector(state=>state.PropertiesReducer)
 
   useEffect(()=>{
-    if(!properties.length){
-      dataGetter()
+    if(!dispData.length){
+      dispatch(GetAllProperties(searchParams.get("landlord")))
     }
   }, [])
 
   return (
-    <Flex>
-      <Stack>
-
-      </Stack>
+    <Flex
+    justifyContent={'space-around'}
+    >
+      <Sidebar />
       <SimpleGrid
       columns={'3'}
-      w={'75%'}
+      w={'70%'}
       gap={'3%'}
       >
-      { loading && <Spinner /> }
+      { isLoading ? <Spinner />:null }
       { 
-        properties.length && !error ? properties.map(ele=><SingleProperty data={ele} />) : <Heading color='red'>Something went wrong</Heading>
+        dispData?.length ? dispData.map(ele=><SingleProperty data={ele} />) : null
+      }
+      {
+        isError ?  <Heading color='red'>Something went wrong</Heading> : null
       }
       </SimpleGrid>
     </Flex>
