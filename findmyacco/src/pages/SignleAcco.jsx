@@ -48,7 +48,10 @@ const SignleAcco = () => {
               <Box>
                 <Box display={"flex"} justifyContent="space-between">
                   <Heading>{data?.address?.property_name}</Heading>
-                  <Button bgColor={"#ec6449"} _hover={{color:"white"}} onClick={()=>window.open(data?.contracts?.[0].book_now_url)}>Book</Button>
+                    <Box display="flex" flexDir="column" gap="10px" mb="10px">
+                      <Button bgColor={"#ec6449"} _hover={{color:"white"}}  onClick={()=>window.open(data?.contracts?.[0].book_now_url)}>Book</Button>
+                      <Button bgColor={"#ec6449"} _hover={{color:"white"}}  onClick={()=>window.open(data?.contracts?.[0].viewing_url)}>Wanna take A visit?</Button>
+                    </Box>
                 </Box>
                 <Box display={"flex"} justifyContent="space-between">
                 <Text alignContent={"center"}><Image src={loc} display="inline"></Image>{data?.address?.property_name}, {data?.address?.road_name}, {data?.address?.postcode},  {data?.address?.city}</Text>
