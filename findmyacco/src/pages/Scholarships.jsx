@@ -1,3 +1,4 @@
+
 import { Hero } from '../../components/ScholarshipsComponents/Hero'
 import { OtherServices } from '../../components/ScholarshipsComponents/OtherServices'
 import { EmbarkYourJourney } from '../../components/ScholarshipsComponents/EmbarkYourJourney'

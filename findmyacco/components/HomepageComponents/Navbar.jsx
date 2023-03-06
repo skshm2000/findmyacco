@@ -29,7 +29,7 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef() 
   return (
-  <Box h="100px" alignItems={"center"}  justifyContent={"space-around"} postion="sticky" top={0} display={"flex"} boxShadow=" rgba(149, 157, 165, 0.2) 0px 8px 24px;" >
+  <Box h="80px" alignItems={"center"}  justifyContent={"space-around"} postion="sticky" top={0} display={"flex"} boxShadow=" rgba(149, 157, 165, 0.2) 0px 8px 24px;" >
       <Image h="80%" src="https://www.findmyacco.com/image/logo.png"></Image>
       <Box display={{base:"none",md:"flex"}} gap="25px" fontWeight={"bold"}>
         <Link to="/about">About us</Link>

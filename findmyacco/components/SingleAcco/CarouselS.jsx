@@ -15,15 +15,15 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export function Carousel({ cards }) {
+export default function CarouselS({ cards,h }) {
   const [slider, setSlider] = useState(null);
   const top = useBreakpointValue({ base: '90%', md: '50%' });
   const side = useBreakpointValue({ base: '30%', md: '10px' });
-
+ console.log(cards)
   return (
     <Box
       position={'relative'}
-      height={'250px'}
+      height={h}
       borderRadius={'20px'}
       width={'100%'}
       overflow={'hidden'}>
@@ -68,15 +68,18 @@ export function Carousel({ cards }) {
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {cards.map((url, index) => (
+            <Box>
           <Box
+           width={"100%"}
             key={index}
-            height={'6xl'}
+            height={'lg'}
             position="relative"
-            // backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            // backgroundSize="cover"
-            backgroundImage={`url(${url.thumb})`}
-          />
+            backgroundPosition="center"
+            backgroundRepeat="no-repeat" 
+            backgroundSize="cover"
+            backgroundImage={`url(${url.photo})`}
+            />
+            </Box>
         ))}
       </Slider>
     </Box>
