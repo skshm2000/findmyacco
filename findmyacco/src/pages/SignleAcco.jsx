@@ -8,8 +8,11 @@ import CarouselS from '../../components/SingleAcco/CarouselS';
 import Carousel2 from '../../components/SingleAcco/Carousel2';
 import Pound from "../assets/icons8-british-pound.svg"
 import loc from "../assets/loc.png"
+import { FormModal } from '../../components/SingleAcco/FormModal';
+
 const SignleAcco = () => {
   let [ searchParams ] = useSearchParams()
+  const [ modalOpen, setModalOpen ] = useState(false)
   const store=useSelector(store=>store.PropertiesReducer)
   const {allData}=store
   const [data,setData]= useState({});
@@ -19,6 +22,8 @@ const SignleAcco = () => {
    console.log(allData)
   }, []);
   return (
+    <>
+    <FormModal toggle={modalOpen} closeModal={()=>setModalOpen(false)} />
     <Box  width={"90%"} m="auto">
         <Box py="10px">
         <Breadcrumb spacing='8px' separator={<ChevronRightIcon color='gray.500' />}>
@@ -49,8 +54,7 @@ const SignleAcco = () => {
                 <Box display={"flex"} justifyContent="space-between">
                   <Heading>{data?.address?.property_name}</Heading>
                     <Box display="flex" flexDir="column" gap="10px" mb="10px">
-                      <Button bgColor={"#ec6449"} _hover={{color:"white"}}  onClick={()=>window.open(data?.contracts?.[0].book_now_url)}>Book</Button>
-                      <Button bgColor={"#ec6449"} _hover={{color:"white"}}  onClick={()=>window.open(data?.contracts?.[0].viewing_url)}>Wanna take A visit?</Button>
+                      <Button bgColor={"#ec6449"} _hover={{color:"white"}} onClick={()=>setModalOpen(true)}>Enquire</Button>
                     </Box>
                 </Box>
                 <Box display={"flex"} justifyContent="space-between">
@@ -137,6 +141,7 @@ const SignleAcco = () => {
             </Box>
         </Box>
     </Box>
+    </>
   );
 }
 
