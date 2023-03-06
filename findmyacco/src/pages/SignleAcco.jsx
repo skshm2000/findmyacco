@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink,Button,Grid,GridItem, Heading,Image,Link,Text,Divider } from '@chakra-ui/react';
+import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink,Button,Grid,GridItem, Heading,Image,Link,Text,Divider, TabList, Tabs, Tab, TabPanels, TabPanel } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { useParams, useSearchParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -48,7 +48,7 @@ const SignleAcco = () => {
               <Box>
                 <Box display={"flex"} justifyContent="space-between">
                   <Heading>{data?.address?.property_name}</Heading>
-                  <Button bgColor={"#ec6449"} _hover={{color:"white"}}>Book/Enquire</Button>
+                  <Button bgColor={"#ec6449"} _hover={{color:"white"}} onClick={()=>window.open(data?.contracts?.[0].book_now_url)}>Book</Button>
                 </Box>
                 <Box display={"flex"} justifyContent="space-between">
                 <Text alignContent={"center"}><Image src={loc} display="inline"></Image>{data?.address?.property_name}, {data?.address?.road_name}, {data?.address?.postcode},  {data?.address?.city}</Text>
@@ -89,6 +89,48 @@ const SignleAcco = () => {
                   <Text mb="7px">If For Any Reason, Your Visa Application Has Been Denied, Or If You Fail To Get A Place At Your University, Your Booking Can Be Easily Cancelled For Free.</Text>
                   <Link textDecoration={"underline"}>Know More</Link>
               </Box>
+            </Box>
+        </Box>
+        <Divider borderColor={"black"} py="10px" mt="10px" position={"relative"} width="130%" left={-100}/>
+        <Box>
+
+        </Box>
+         <Box display={"flex"} py="50px" gap="20px"> 
+            <Box flex={0.7} gap="20px" display={"flex"} flexDir="column">
+            <Tabs size="lg" colorScheme="blackAlpha" variantColor="red">
+            <TabList  >
+              <Tab>About</Tab>
+              <Tab>Location</Tab>
+              <Tab>Room Types</Tab>
+              <Tab>Facilities</Tab>  
+              <Tab>Reviews</Tab>
+              <Tab>Faqs</Tab>
+            </TabList>
+
+            <TabPanels>
+              <TabPanel>
+                <p>two!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>one!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>three!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>two!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>one!</p>
+              </TabPanel>
+              <TabPanel>
+                <p>three!</p>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+            </Box>
+            <Box flex={0.3}>
+             
             </Box>
         </Box>
     </Box>
