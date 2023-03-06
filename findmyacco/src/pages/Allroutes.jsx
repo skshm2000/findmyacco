@@ -10,7 +10,7 @@ import HostAHome from './HostAHome';
 import { SingleCountry } from './SingleCountry';
 import { SingleCity } from './SingleCity';
 import { Properties } from './Properties';
-
+import SingleAcco from "./SignleAcco"
 const Allroutes = () => {
   return (
     <>
@@ -21,6 +21,7 @@ const Allroutes = () => {
           <Route path="/:country" element={<SingleCountry />} />
           <Route path="/:country/:city" element={<SingleCity />} />
           <Route path="/properties" element={<Properties />} />
+          <Route path="/properties/room" element={< SingleAcco/>} />
           <Route path='admin' element={<Admin/>}>
             <Route index element={<Dashboard/>}/>
             <Route path='inquiry' element={<InquiryTable/>}/>

@@ -12,9 +12,9 @@ export const Properties = () => {
   let { isLoading, isError, dispData } = useSelector(state=>state.PropertiesReducer)
 
   useEffect(()=>{
-    if(!dispData.length){
+    // if(!dispData.length){
       dispatch(GetAllProperties(searchParams.get("landlord")))
-    }
+    // }
   }, [])
 
   return (

@@ -1,11 +1,12 @@
 import React from 'react'
-import Carousel from './ImageCarousel'
+import {Carousel} from './ImageCarousel.jsx'
 import { Heading, Stack, Flex, Button } from '@chakra-ui/react'
 import { Address } from './Address'
 import { Facilities } from './Facilities'
 import PriceRange from './PriceRange'
-
+import { useNavigate } from 'react-router-dom'
 export const SingleProperty = ({ data }) => {
+  const nav=useNavigate()
   return (
     <Stack
     p='4%'
@@ -23,7 +24,7 @@ export const SingleProperty = ({ data }) => {
         ></Stack>
         <Flex>
             <PriceRange data={data.contracts} />
-            <Button>Know More</Button>
+            <Button onClick={()=>nav(`/properties/room?roomid=${data.property_id}`)}>Know More</Button>
         </Flex>
     </Stack>
   )

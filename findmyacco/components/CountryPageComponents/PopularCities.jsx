@@ -119,6 +119,31 @@ export const PopularCities = ({ name }) => {
                 px='5px'
                 >Leicester</Text>
             </Stack>
+            <Stack
+            w='24%'
+            h='350px'
+            borderRadius={'25px'}
+            overflow={'hidden'}
+            position={'relative'}
+            alignItems={'center'}
+            onClick={()=>{
+                nav(`/${name}/Leeds`)
+            }}
+            >
+                <Image
+                className='singleCityCard'
+                w='100%'
+                h='100%'
+                src={leicester} />
+                <Text
+                position={'absolute'}
+                bottom={'5'}
+                color={'white'}
+                fontSize={'20px'}
+                bgColor='black'
+                px='5px'
+                >Leeds</Text>
+            </Stack>
         </Flex>
     </Stack>
     </>

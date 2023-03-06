@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { Heading, Spinner, Stack, Flex, Image, Text } from '@chakra-ui/react'
 
+
 const API = import.meta.env.VITE_GETLANDLORDS_API
 export const SingleCity = () => {
   const [ data, setData ] = useState([])
@@ -13,6 +14,7 @@ export const SingleCity = () => {
   async function dataGetter() {
     let res = await axios.get(`${API}?city=${city}`)
     let resData = await res.data
+    
     setData(resData.data)
   }
 
