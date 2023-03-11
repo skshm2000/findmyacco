@@ -3,10 +3,6 @@ import { FiMenu, FiSearch  } from "react-icons/fi";
 import { FaBell, FaRss, FaClipboardCheck  } from "react-icons/fa";
 import { MdHome } from "react-icons/md";
 import { TbDeviceAnalytics } from "react-icons/tb";
-import { AiFillGift } from "react-icons/ai";
-import { BsGearFill } from "react-icons/bs";
-import { HiCollection, HiCode } from "react-icons/hi";
-
 import { useDisclosure, Icon, Input, Flex, Box, Text, Drawer, DrawerOverlay, DrawerContent, IconButton, InputGroup, InputLeftElement, Avatar, Image, Select, Accordion, AccordionItem, AccordionButton, AccordionIcon, List, AccordionPanel, Heading } from "@chakra-ui/react"
 import { Link, Outlet } from 'react-router-dom';
 

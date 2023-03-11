@@ -5,7 +5,7 @@ import { BACKEND_URL } from "../store";
 export const getAllInquiry = (page) => async(dispatch)=>{
     try{
         dispatch({type: INQUIRY_LOADING});
-        let res = await axios.get(`${BACKEND_URL}/query/admin/getQueries/${page}`);
+        let res = await axios.get(`${BACKEND_URL}/accoquery/admin/getQueries/${page}`);
         // console.log(res.data);
         dispatch({type: GET_INQUIRIES, payload: res.data});
     }catch(err){

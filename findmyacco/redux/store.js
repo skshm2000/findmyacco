@@ -7,7 +7,6 @@ import { PropertiesReducer } from './Properties/Properties.reducer'
 // import { userReducer } from './user/user.reducer';
 
 export const BACKEND_URL = "http://localhost:8080";
-// export const BACKEND_URL = "";
 
 let rootReducer = combineReducers({
     // user: userReducer,
