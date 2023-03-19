@@ -6,6 +6,7 @@ const HostAHome = require('./Routes/HostAHome.route')
 const GetAcco = require('./Routes/GetAcco.route')
 const GetLandlords = require('./Routes/GetLandlords.route')
 const AccoQuery = require('./Routes/AccoQuery.route')
+const AuthRouter = require('./Routes/Auth.route')
 const app = express()
 
 app.use(express.json())
@@ -15,6 +16,7 @@ app.use('/SSQuery', SSQueryRouter)
 app.use('/hostahome', HostAHome)
 app.use('/getacco', GetAcco)
 app.use('/getlandlords', GetLandlords)
+app.use('/adminlogin', AuthRouter)
 
 app.listen(8080, async () => {
     await dbconnect()

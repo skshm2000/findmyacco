@@ -5,6 +5,8 @@ import { SingleProperty } from '../../components/PropertiesPageComponents/Single
 import { useSelector, useDispatch } from 'react-redux'
 import { GetAllProperties } from '../../redux/Properties/Properties.actions'
 import { Sidebar } from '../../components/PropertiesPageComponents/Sidebar'
+import Navbar from '../../components/HomepageComponents/Navbar'
+import Footer from '../../components/HomepageComponents/Footer'
 
 export const Properties = () => {
   let [ searchParams ] = useSearchParams()
@@ -18,13 +20,17 @@ export const Properties = () => {
   }, [])
 
   return (
+    <>
+    <Navbar />
     <Flex
     justifyContent={'space-around'}
+    mt='20px'
+    mb='140px'
     >
       <Sidebar />
       <SimpleGrid
       columns={'3'}
-      w={'70%'}
+      w={'72%'}
       gap={'3%'}
       >
       { isLoading ? <Spinner />:null }
@@ -36,5 +42,7 @@ export const Properties = () => {
       }
       </SimpleGrid>
     </Flex>
+    <Footer/>
+    </>
   )
 }

@@ -5,7 +5,7 @@ import { RoomTypeFilterC } from './SidebarComponents/RoomTypeFilter'
 export const Sidebar = () => {
   return (
     <Stack
-    w='20%'
+    w='18%'
     >
         <RoomTypeFilterC/>
     </Stack>

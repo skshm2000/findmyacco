@@ -7,6 +7,8 @@ import { Register } from '../../components/ScholarshipsComponents/Register'
 import { RRR } from '../../components/ScholarshipsComponents/RRR'
 import { FAQs } from '../../components/ScholarshipsComponents/FAQs'
 import { useEffect } from 'react'
+import Navbar from '../../components/HomepageComponents/Navbar'
+import Footer from '../../components/HomepageComponents/Footer'
 
 export const Scholarships = () => {
 
@@ -15,6 +17,7 @@ export const Scholarships = () => {
   }, [])
   return (
     <>
+      <Navbar />
         <Hero />
         <OtherServices/>
         <EmbarkYourJourney/>
@@ -22,6 +25,7 @@ export const Scholarships = () => {
         <Register/>
         <RRR/>
         <FAQs/>
+      <Footer/>
     </>
   )
 }

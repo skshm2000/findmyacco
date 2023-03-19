@@ -9,6 +9,8 @@ import Carousel2 from '../../components/SingleAcco/Carousel2';
 import Pound from "../assets/icons8-british-pound.svg"
 import loc from "../assets/loc.png"
 import { FormModal } from '../../components/SingleAcco/FormModal';
+import Navbar from '../../components/HomepageComponents/Navbar';
+import Footer from '../../components/HomepageComponents/Footer';
 
 const SignleAcco = () => {
   let [ searchParams ] = useSearchParams()
@@ -23,6 +25,7 @@ const SignleAcco = () => {
   }, []);
   return (
     <>
+    <Navbar />
     <FormModal toggle={modalOpen} closeModal={()=>setModalOpen(false)} />
     <Box  width={"90%"} m="auto">
         <Box py="10px">
@@ -141,6 +144,7 @@ const SignleAcco = () => {
             </Box>
         </Box>
     </Box>
+    <Footer/>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { Text, Stack, Image, Heading, Flex } from '@chakra-ui/react'
+import { Text, Stack, Image, Heading, Flex, SimpleGrid } from '@chakra-ui/react'
 import loughborough from './Assets/loughborough.jpg'
 import nottingham from './Assets/nottingham.webp'
 import exeter from './Assets/exeter.jpg'
@@ -16,11 +16,12 @@ export const PopularCities = ({ name }) => {
     mt='8%'
     >
         <Heading>Popular Cities in { name=='uk' ? 'United Kingdom':name }</Heading>
-        <Flex
+        <SimpleGrid
+        columns={4}
+        gap='10px'
         justifyContent={'space-between'}
         >
             <Stack
-            w='24%'
             h='350px'
             borderRadius={'25px'}
             overflow={'hidden'}
@@ -45,7 +46,6 @@ export const PopularCities = ({ name }) => {
                 >Loughborough</Text>
             </Stack>
             <Stack
-            w='24%'
             h='350px'
             borderRadius={'25px'}
             overflow={'hidden'}            
@@ -70,7 +70,6 @@ export const PopularCities = ({ name }) => {
                 >Nottingham</Text>
             </Stack>
             <Stack
-            w='24%'
             h='350px'
             borderRadius={'25px'}
             overflow={'hidden'}
@@ -95,7 +94,6 @@ export const PopularCities = ({ name }) => {
                 >Exeter</Text>
             </Stack>
             <Stack
-            w='24%'
             h='350px'
             borderRadius={'25px'}
             overflow={'hidden'}
@@ -120,7 +118,6 @@ export const PopularCities = ({ name }) => {
                 >Leicester</Text>
             </Stack>
             <Stack
-            w='24%'
             h='350px'
             borderRadius={'25px'}
             overflow={'hidden'}
@@ -144,7 +141,7 @@ export const PopularCities = ({ name }) => {
                 px='5px'
                 >Leeds</Text>
             </Stack>
-        </Flex>
+        </SimpleGrid>
     </Stack>
     </>
   )
