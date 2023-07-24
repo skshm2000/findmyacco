@@ -7,18 +7,14 @@ import {
   Stack,
   Text,
   VisuallyHidden,
-  Input,
-  IconButton,
   useColorModeValue,
   Flex,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { AiFillHome } from "react-icons/ai";
-import { BiMailSend } from "react-icons/bi";
 import { MdEmail } from "react-icons/md";
 import { AiFillPhone } from "react-icons/ai";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./footer.css";
 
 const Logo = (props) => {
@@ -75,7 +71,7 @@ const ListHeader = ({ children }) => {
 
 const Footer = () => {
   return (
-    <Box w="100%" position={'sticky'} bottom='0px'>
+    <Box className="w-full b-0 sticky h-full">
       <Box
         w="100%"
         m="auto"

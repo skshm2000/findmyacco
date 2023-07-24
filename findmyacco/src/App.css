@@ -3,11 +3,12 @@
   src: url("./assets/Poppins/Poppins-Regular.ttf");
 }
 
-.App{
+.App {
   font-family: "Poppins", "sans-serif";
 }
 
-html, body {
+html,
+body {
   margin: 0;
   overflow: auto;
- }
+}

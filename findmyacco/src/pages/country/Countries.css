@@ -1,6 +1,5 @@
 .singleCityCard {
-    scale: 1;
-    transition: 'top ease 1s';
+    transition: 'all 1s ease-in-out';
 }
 .singleCityCard:hover {
     transform: scale(1.25);

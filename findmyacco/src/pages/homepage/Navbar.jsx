@@ -8,46 +8,31 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  Input,
   DrawerContent,
   DrawerCloseButton,
-  Button,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useDisclosure } from "@chakra-ui/react";
-import call from "../HomepageComponents/IMAGES/call.png";
-import wa from "../HomepageComponents/IMAGES/whatsapp.png";
+import call from "./IMAGES/call.png";
+import wa from "./IMAGES/whatsapp.png";
 import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import { GiHamburgerMenu } from "react-icons/gi";
-import logo from "../../src/assets/logo.png";
+import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <Box
-      h="80px"
-      alignItems={"center"}
-      justifyContent={"space-around"}
-      postion="sticky"
-      top={0}
-      display={"flex"}
-      boxShadow=" rgba(149, 157, 165, 0.2) 0px 8px 24px;"
-    >
+    <div className="h-20 items-center justify-around fixed top-0 flex bg-white shadow w-full z-10">
       <Image h="80%" src={logo}></Image>
       <Box
         display={{ base: "none", md: "flex" }}
@@ -161,7 +146,7 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
       </Box>
-    </Box>
+    </div>
   );
 };
 

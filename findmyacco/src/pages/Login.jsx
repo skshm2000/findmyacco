@@ -9,9 +9,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Loginner } from "../../redux/user/user.actions";
+import { Loginner } from "../redux/user/user.actions";
 import { useNavigate } from "react-router-dom";
-import logo from "../../src/assets/logo.png";
+import logo from "../assets/logo.png";
 
 const initState = {
   email: "",

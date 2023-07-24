@@ -1,16 +1,16 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "../../components/Admin/Dashboard";
-import InquiryTable from "../../components/Admin/InquiryTable";
-import ScholarshipInquiryTable from "../../components/Admin/ScholarshipInquiryTable";
-import Admin from "./Admin";
-import Homepage from "./Homepage";
-import { Scholarships } from "./Scholarships";
-import HostAHome from "./HostAHome";
-import { SingleCountry } from "./SingleCountry";
-import { SingleCity } from "./SingleCity";
-import { Properties } from "./Properties";
-import SingleAcco from "./SignleAcco";
+import Dashboard from "./admin-panel/Dashboard";
+import InquiryTable from "./admin-panel/InquiryTable";
+import ScholarshipInquiryTable from "./admin-panel/ScholarshipInquiryTable";
+import Admin from "./admin-panel";
+import Homepage from "./homepage";
+import { Scholarships } from "./scholarships";
+import HostAHome from "./host-a-home";
+import { SingleCountry } from "./country";
+import { SingleCity } from "./city";
+import { Properties } from "./properties";
+import SingleAcco from "./single-accomodation";
 import Login from "./Login";
 const Allroutes = () => {
   return (
